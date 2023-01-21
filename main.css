@@ -307,6 +307,10 @@ header::after{
     font-size: 0.8rem;
     font-weight: 300;
 }
+.faq-ques i{
+    color: var(--color-white);
+    margin-left: 0.50rem;
+}
 .answer{
     display: none;
 }
