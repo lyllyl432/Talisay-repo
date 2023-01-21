@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="/Talisay College Project/main.css">
+    <!-- FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800;900&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+    <!-- FONT ICON  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <!-- SWIPER -->
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
+</head>
+  <body>
+    <!------------NAVBAR---------------->
+    <!--use navbar light if the navbar has darker background and navbar dark if the navbar has white background the two has 50% opacity-->
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="img/logo.jpg" alt="logo"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto me-5">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Academic</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/Talisay College Project/about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Academic</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Academic</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  <!------------END NAVBAR---------------->
+
+<!------------------HEADER--------------------->
+    <header>
+      <div class="container">
+            <div class="header-text text-center">
+              <h3>Welcome home,</h3>
+              <h1>Talisalites</h1>
+        </div>
+      </div>
+    </header>
+    
+<!------------------END HEADER--------------------->
+<!------------------ABOUT SECTION--------------------->
+    <section id="about"> <!--can add height in this section but better if we will add height to the row class to be specific--->
+      <div class="container">
+        <div class="row align-items-center gy-4">
+          <div class="col-md-4">
+            <div class="box">
+              <div class="icon">
+                <img src="img/gold-online-educationB.png">
+              </div>
+              <div class="box-title">
+                <h3>Enrollment</h3>
+              </div>
+            </div>
+            
+          </div>
+          <div class="col-md-4">
+            <div class="box">
+              <div class="icon">
+                <img src="img/gold-grant.png">
+              </div>
+              <div class="box-title">
+                <h3>Scholarships</h3>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="box">
+              <div class="icon">
+                <img src="img/gold-mobile-payment.png">
+              </div>
+              <div class="box-title">
+                <h3>Payment Options</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+<!------------------END ABOUT--------------------->
+<!---------------------BACKGROUND FILLERS-------------------------->
+<section id="backgroundFillers">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="filler-container">
+        <img src="img/img_fillers_left.jpeg" class="img-left">
+        <div class="filler-text">
+          <h3 class="display-2">Be a talisalites today</h3>
+          <a href="" class="btn">Enroll now</a>
+        </div>
+      </div>
+      </div>
+      <div class="col-lg-6">
+        <img src="img/class scjed.PNG">
+      </div>
+    </div>
+  </div>
+</section>
+<!---------------------END BACKGROUND FILLERS-------------------------->
+<!--------------------------COUNTER ACHIEVEMENT--------------------------------->
+<section class="counterAchievement"> <!--if naay display grid or flex mo fill og height ang mga child elements for instance ang row og child element sa row-->
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-md-3"> <!--focused on intrinsic sizing if you add height 100-->
+          <span class="numbers" data-val="2000">00</span> <!--to wrap if you want to add box with the another color add another wrapper-->
+          <h3>First Placer</h3>
+      </div>
+      <div class="col-md-3">
+        <span class="numbers" data-val="2000">00</span>
+        <h3>Top Notchers</h3>
+      </div>
+      <div class="col-md-3">
+          <span class="numbers" data-val="2000">00</span>
+          <h3>Academic Scholars</h3>
+        </div>
+      <div class="col-md-3"  >
+        <span class="numbers" data-val="2000">00</span>
+        <h3>Special and Non Academic</h3>
+      </div>
+    </div>
+  </div>
+</section>
+<!--------------------------END COUNTER ACHIEVEMENT--------------------------------->
+<!------------------CAROUSEL SECTION--------------------->
+<section id="swiper-container">
+  <div class="container">
+    <div class="title text-center">
+      <h1>Stories @ TCC</h1>
+    </div>
+    <!--SWIPER-->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="img/slider-img-1.jpg"></div>
+        <div class="swiper-slide"><img src="img/slider-img-2.jpg"></div>
+        <div class="swiper-slide"><img src="img/slider-img-3.jpg"></div>
+        <div class="swiper-slide">Slide 4</div>
+        <div class="swiper-slide">Slide 5</div>
+        <div class="swiper-slide">Slide 6</div>
+        <div class="swiper-slide">Slide 7</div>
+        <div class="swiper-slide">Slide 8</div>
+        <div class="swiper-slide">Slide 9</div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </div>
+</div>
+</section>
+  <!------------------END CAROUSEL SECTION--------------------->
+  <!--------------------------COURSES--------------------------------->
+  
+<!--------------------------END COURSES--------------------------------->
+<!--------------------------FAQ--------------------------------->
+<section id="faq">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+          <div class="faq-title">
+            <h2>Frequently asked question</h2>
+          </div>
+          <div class="faq-questions">
+          <div class="faq-ques">
+            <h3>Is there an extrance exam?<i class="fa-light fa-chevron-down faq-down"></i></h3>
+            <p class="lead answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, doloribus?</p>
+          </div>
+          <div class="faq-ques">
+            <h3>How much is the tuition fee? <i class="fa-light fa-chevron-down faq-down"></i></h3>
+            <p class="lead answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, doloribus?</p>
+          </div>
+          <div class="faq-ques">
+            <h3>What scholarships are available?<i class="fa-light fa-chevron-down faq-down"></i></h3>
+            <p class="lead answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, doloribus?</p>
+          </div>
+          <div class="faq-ques">
+            <h3>Does school accept transferee?<i class="fa-light fa-chevron-down faq-down"></i></h3>
+            <p class="lead answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, doloribus?</p>
+          </div>
+      </div>
+    </div>
+      <div class="col-lg-6">
+        <div class="featured-video">
+          <video controls><source src="/Talisay College Project/video/TCC, You're the Hope, Pride and Future.mp4" type="video/mp4"></video>
+        </div>  
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!--------------------------END FAQ--------------------------------->
+<!--------------------------CONTACT US--------------------------------->
+<section id="contact_us">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-7">
+        <div class="map-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!4v1671979824520!6m8!1m7!1sytkgm3O1eZgEe6KtDNUA9A!2m2!1d10.24321991386844!2d123.8479579594684!3f125.95530457176989!4f7.700399072903608!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+      <div class="col-lg-5">
+        <h2 class="contact-header text-center">Send us message</h2>
+        <form class="was-validated">
+          <div class="input-row">
+            <input type="text" placeholder="First Name:"  class="form-control" required>
+          </div>
+          <div class="input-row">
+            <input type="text" placeholder="Last Name:" class="form-control" required>
+          </div>
+          <div class="input-row">
+            <input type="email" placeholder="Email:" class="form-control" required>
+          </div>
+          <div class="input-row">
+            <textarea name="message" id="textarea" class="form-control" cols="30" rows="10" placeholder="Send message"></textarea>
+          </div>
+          <button class="btn">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<!--------------------------END CONTACT US--------------------------------->
+<footer>
+  <div class="container-fluid">
+    <div class="row align-items-center justify-content-center">
+      <div class="col-md-4 text-center">
+        <p>Garces St, Poblacion, Talisay, 6045 Cebu</p>
+        <p>Telephone: 411-2000</p>
+        <p>Email: info@cit.edu</p>
+      </div>
+      <div class="col-md-4">
+        <div class="logo mx-auto">
+          <img src="img/logo.jpg">
+        </div>
+      </div>
+      <div class="col-md-4 d-flex align-items-center justify-content-center mt-3">
+        <ul class="social d-flex gap-4">
+          <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+          <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+          <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+          <li><a href=""><i class="fa-solid fa-envelope"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+ <!-- Option 1: Bootstrap Bundle with Popper -->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+ <!--SWIPER JS-->
+ <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+ <script src="main.js"></script>
+ 
+  </body>
+</html>

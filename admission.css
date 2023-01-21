@@ -1,0 +1,120 @@
+:root{
+    --color-primary: #FFDC81;
+    --color-secondary: #EFAC00;
+    --color-bg-1: #00A3E8;
+    --color-bg-1-variant: rgba(0, 163, 232, 0.8);
+    --color-bg-3: #412e09; 
+    --color-bg-4: #937424;
+    --color-bg-5: #C6BE00; 
+    --color-bg-6: #724708;  
+    --color-white: #fff;
+    --color-black: #000;
+}
+h1,h2,h3,h4,h5,h6{
+    font-weight: 700;
+}
+/*----------------HEADER------------------*/
+header{
+    min-height: 50vh;
+}
+.header_text{
+    position: relative;
+    top: 3rem;
+}
+.header-title{
+    font-size: 2rem;
+}
+.header_text h2{
+    font-weight: 700;
+}
+/*----------------END HEADER------------------*/
+/*----------------CONTENT------------------*/
+.info{
+    position: relative;
+    min-height: 100vh;
+}
+#first-col{
+    background: var(--color-primary);
+}
+.title{
+    margin: 0;
+    padding: 0;
+    color: var(--color-bg-3);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+#first-col .login_link:hover{
+   text-decoration: underline !important;
+}
+#second-col{
+    background: var(--color-bg-4);
+}
+#second-col .subtitle{
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+.subtitle-info{
+    margin-top: 2rem;
+    color: var(--color-bg-3);
+}
+.subtitle-info h5{
+    text-transform: capitalize;
+}
+.col-text{
+    font-size: 1rem;
+}
+.list-group-item{
+    color: var(--color-bg-3);
+    border: none !important;
+    margin: 0;
+    padding: 0;
+    font-weight: 500;
+    font-size: 0.8rem;
+}
+/*----------------END CONTENT------------------*/
+/*----------------CARDS------------------*/
+.cards-container{
+    background: var(--color-bg-1);
+}
+.cards-container .title{
+    color: var(--color-white);
+}
+.card{
+    overflow: hidden !important;
+    transition: all 1s ease-out !important;
+}
+.card-body{
+    background: var(--color-bg-3);
+}
+.card-text{
+    color: var(--color-secondary);
+    font-weight: 800;
+    text-align: center;
+}
+.card-img-top{
+    transition: transform 0.5s ease-in-out;
+}
+.card-img-top:hover{
+    transform: scale(1.1);
+}
+
+/*----------------END CARDS------------------*/
+@media (min-width:900px){
+    .header-title{
+        font-size: 3rem;
+    }
+    .title{
+        font-size: 2rem 
+    }
+    .subtitle{
+        font-size: 1rem !important;
+    }
+    .col-text{
+        font-size: 1.2rem;
+    }
+    .list-group-item{
+        font-size: 0.9rem;
+    }
+
+}

@@ -1,0 +1,517 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+:root{
+    --color-primary: #FFDC81;
+    --color-secondary: #EFAC00;
+    --color-bg-1: #00A3E8;
+    --color-bg-1-variant: rgba(0, 163, 232, 0.6);
+    --color-bg-3: #412e09; 
+    --color-bg-4: #937424;
+    --color-bg-5: #C6BE00; 
+    --color-bg-6: #724708;  
+    --color-white: #fff;
+    --color-black: #000;
+}
+body{
+    font-family: 'Nunito', sans-serif;
+    color: var(--color-white);
+    text-decoration: none;
+    list-style: none;
+}
+h1,h2,h3,h4,h5,h6{
+    font-weight: 700;
+}
+img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+video{
+    display: block;
+    width: 100%;
+    height: 100%;
+} 
+.btn{
+    display: inline-block;
+    background: var(--color-secondary) !important;
+    padding: 0.5rem 1rem;
+    color: var(--color-white);
+    border: 2px solid var(--color-bg-6) !important;
+    font-size: 0.8rem;
+}
+.btn:hover{
+    text-decoration: underline;
+    color: var(--color-white);
+}
+/*--------------------NAV------------------------*/
+.navbar{
+    background: var(--color-bg-1);
+    position: fixed;
+    width: 100vw;
+    z-index: 999;
+}
+.nav-link{
+    color: var(--color-white);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.navbar-brand{
+    width: 5rem;
+    height: 5rem;
+}
+.navbar-brand img{
+    width: 100%;
+    border-radius: 50%;
+}
+/*--------------------END NAV------------------------*/
+/*--------------------HEADER------------------------*/
+header{
+    position: relative;
+    background: url(img/header-fixed.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: hidden;
+    min-height: 70vh;
+    display: grid;
+    place-items: center;
+}
+header::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.6);
+}
+.header-text{
+    position: relative;
+    z-index: 1;
+    color: var(--color-primary);
+    text-shadow: 1px 1px 1rem var(--color-black);
+    text-transform: uppercase;
+    margin-top: 2rem;
+}
+
+.header-text h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+.header-text h3 {
+    font-size: 1.2rem;
+    font-weight: 300;  
+}
+/*--------------------END HEADER------------------------*/
+/*--------------------ABOUT SECTION------------------------*/
+#about{
+    height: 100%;
+    display: grid;
+    place-items: center;
+    margin: 5rem 0;
+}
+
+#about .box{
+    position: relative;
+    border: 3px solid var(--color-bg-4);
+    padding: 1rem;
+    display: grid;
+    place-items: center;
+}
+
+#about .icon{
+    height: 7rem;
+    width: 7rem;
+    transition: all .2s ease-in-out;
+}
+#about .box-title{
+    color: var(--color-bg-4);
+    text-transform: uppercase;
+    z-index: 1;
+}
+#about .box-title h3{
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-top: 1rem;
+}
+#about .box:hover{
+   background: var(--color-bg-1-variant);
+}
+#about .icon:hover{
+    transform: scale(1.1);
+}
+
+/*--------------------END ABOUT------------------------*/
+/*--------------------BACKGROUND-FILLERS------------------------*/
+#backgroundFillers{
+    min-height: 70vh;
+    background: var(--color-bg-3);
+    display: grid;
+    place-items: center;
+}
+.filler-container{
+    position: relative;
+    height: 100%;
+}
+.filler-container .img_left{
+    height: 100%;
+    width: 100%;
+}
+.filler-container::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    opacity: 70%;
+    z-index: 1;
+}
+.filler-text{
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 2;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--color-secondary);
+    text-shadow: 1px 1px 10px var(--color-black);
+}
+.filler-text h3{
+    font-size: 2rem;
+    font-weight: 800;
+}
+.filler-container .img-left{
+    display: flex;
+    flex-shrink: 0;
+}
+/*--------------------END BACKGROUND-FILLERS------------------------*/
+
+/*--------------------CAROUSEL------------------------*/
+#swiper-container{
+    position: relative;
+    min-height: 80vh;
+    background: linear-gradient(#f7d57f,#EFAC00);
+    overflow: hidden;
+}
+.title{
+    display: grid;
+    place-items: center;
+    padding: 3rem 0 0 1rem;
+    color: var(--color-bg-3);
+}
+.title h1{
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.swiper {
+    margin: 2rem auto;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    max-height: 25rem !important;
+    width: 100%;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+  .swiper-pagination{
+    position: absolute;
+    bottom: 15% !important;
+  }
+/*--------------------END CAROUSEL------------------------*/
+/*--------------------COUNTER------------------------*/
+.counterAchievement{
+    background: var(--color-secondary);
+    min-height: 25vh;
+    display: grid;
+    place-items: center;
+}
+.numbers{
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 5px var(--color-black);
+}
+.counterAchievement h3{
+    color: var(--color-bg-3);
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 1.2rem;
+}
+
+
+
+/*--------------------END COUNTER------------------------*/
+/*--------------------FAQ------------------------*/
+#faq{
+    position: relative;
+    background: var(--color-bg-4);
+    padding: 5%;
+}
+.faq-title{
+    background: var(--color-bg-1);
+    padding: 0.5rem 1rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+.faq-title h2{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.faq-questions{
+    text-transform: uppercase;
+    color: var(--color-black);
+    background: var(--color-bg-3);
+    padding: 1rem;
+    height: auto;
+}
+.faq-ques h3{
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5rem;
+    letter-spacing: 0.1rem;
+    padding: 1rem 0 0 0 ;
+    color: var(--color-primary);
+}
+.faq-ques .answer{
+    color: var(--color-white);
+    font-size: 0.8rem;
+    font-weight: 300;
+}
+.answer{
+    display: none;
+}
+.show .answer{
+    display: block;
+    padding: 1rem 0 0 0;
+}
+.featured-video{
+    width: 100%;
+    height: auto;
+}
+.class_schedule{
+    width: 100%;
+    height: fit-content;
+}
+/*--------------------END FAQ------------------------*/
+/*--------------------CONTACT------------------------*/
+#contact_us{
+    min-height: 100vh;
+    background: linear-gradient(#f7d57f,#EFAC00);
+    padding: 1rem 0;
+    display: grid;
+    place-items: center;
+}
+.contact-header{
+    font-weight: 800;
+    text-transform: uppercase;
+    padding: 2rem 0;
+    font-size: 1.5rem;
+    color: var(--color-bg-3);
+}
+.map-container{
+   display: grid;
+   place-items: center;
+   gap: 1rem;
+   height: 30rem;
+   margin: 3rem 0 0 0;
+}
+iframe{
+    width: 100%;
+    height: 100%;
+}
+.input-row{
+    width: 80%;
+    padding-bottom: 1rem;
+}
+form{
+    display: grid;
+    justify-items: center;
+}
+.input-row textarea::placeholder{
+    padding-left: 1rem;
+}
+.input-row input::placeholder,
+textarea::placeholder{
+    color: var(--color-bg-4) !important;
+}
+
+
+/*--------------------END CONTACT------------------------*/
+/*--------------------FOOTER------------------------*/
+footer{
+    background: var(--color-bg-1);
+    padding: 2rem;
+    display: grid;
+    place-items: center;
+    height: auto;
+}
+.logo{
+    width: 7rem;
+    height: 7rem;
+}
+.logo img{
+    border-radius: 50%;
+}
+.social{
+    padding: 0 !important;
+}
+.social li {
+    list-style: none;
+}
+.social li a{
+    color: var(--color-white);
+    text-align: center;
+}
+.social li a i{
+    cursor: pointer;
+}
+.social li a:hover{
+    color: var(--color-primary);
+}
+/*--------------------END FOOTER------------------------*/
+/*--------------------MEDIA QUERIES------------------------*/
+
+/* You might do landscape phones here if your content seems to need it */
+@media (min-width: 450px) {
+    .header-text h1 {
+        font-size: 3rem;
+    }
+    .header-text h3 {
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+    #about{
+        margin: 2rem 0;
+    }
+    .filler-text{
+        top: 15%;
+    }
+    .filler-text h3{
+        font-size: 3rem;
+    }
+    .numbers{
+        font-size: 2rem;
+    }
+    .counterAchievement h3{
+        font-size: 1.5rem;
+    }
+    .btn {
+        font-size: 1rem;
+    }
+    .title h1 {
+        font-size: 2rem;
+    }
+    .faq-title h2 {
+        font-size: 2rem;
+    }
+    .faq-ques h3 {
+        font-size: 1.2rem;
+    }
+    .faq-ques .answer {
+        font-size: 1rem;
+    }
+    .contact-header {
+        font-size: 2rem;
+        margin: 2rem 0 0 0;
+    }
+}
+
+/* Perhaps bigger tablets */
+@media (min-width: 750px){
+    .header-text h1 {
+        font-size: 5rem;
+    }
+    .header-text h3 {
+        font-size: 3rem;
+    }
+    #about{
+        margin: 2rem 0;
+    }
+    #about .icon{
+        height: 5rem;
+        width: 5rem;
+    }
+    #about .box-title h3{
+        font-size: 1rem;
+    }
+   
+    .filler-text{
+        top: 15%;
+    }
+    .filler-text h3{
+        font-size: 4rem;
+    }
+    .faq-title h2 {
+        font-size: 2.5rem;
+    }
+    .faq-ques h3 {
+        font-size: 1.5rem;
+    }
+    .title h1 {
+        font-size: 3rem;
+        font-weight: 800;
+    }
+    .contact-header {
+        font-size: 3rem;
+        margin: 2rem 0 0 0;
+    }
+}
+
+/* Desktop screen or landscape tablet */
+@media (min-width: 900px) {
+    .header-text h1{
+        font-weight: 800;
+        font-size: 7rem;
+    }
+    .header_text h3{
+        font-weight: 600;
+        margin-bottom: 1rem ;
+    }
+    #about .icon{
+        height: 7rem;
+        width: 7rem;
+    }
+    
+}
+
+/* A bit bigger if you need some adjustments around here */
+@media (min-width: 1100px) {
+    #about .box-title h3{
+        font-size: 1.5rem;
+    }
+}
+
+/* Widescreens */
+/* @media (min-width: 1500px) {
+    
+} */

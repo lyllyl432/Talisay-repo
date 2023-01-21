@@ -1,0 +1,77 @@
+:root{
+    --color-primary: #FFDC81;
+    --color-secondary: #EFAC00;
+    --color-bg-1: #00A3E8;
+    --color-bg-1-variant: rgba(0, 163, 232, 0.6);
+    --color-bg-3: #412e09; 
+    --color-bg-4: #937424;
+    --color-bg-5: #C6BE00; 
+    --color-bg-6: #724708;  
+    --color-white: #fff;
+    --color-black: #000;
+}
+.navbar{
+    position: relative;
+    top: 0 !important;
+    position: fixed;
+}
+/*---------------ABOUT------------------*/
+#about{
+    position: relative;
+    top: 5rem;
+    min-height: calc(50vh + 5rem);
+    display: grid;
+    place-items: center;
+}
+#about .card{
+    position: relative;
+    border: none;
+    margin: 1rem 0;
+}
+#about .content-border::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 2px;
+    background: var(--color-secondary);
+}
+#about .content-border::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 2px;
+    background: var(--color-secondary);
+}
+#about .card-subtitle{
+    font-size: 1.5rem;
+    color: var(--color-bg-4);
+    font-weight: 800;
+    text-transform: uppercase;
+}
+#about .card-text{
+    color:var(--color-black);
+    font-weight: 300;
+    margin-top: 1rem;
+}
+#about .card-link{
+    text-decoration: none;
+    color: var(--color-secondary);
+    font-weight: 800;
+    font-size: 1rem;
+}
+/*---------------END ABOUT------------------*/
+/*---------------MAP-CONTENT------------------*/
+#map-content{
+   position: relative;
+   top: 5rem;
+   height: 100vh;
+}
+#map-content iframe{
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+/*---------------END MAP-CONTENT------------------*/
+
