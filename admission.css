@@ -1,36 +1,18 @@
-:root{
-    --color-primary: #FFDC81;
-    --color-secondary: #EFAC00;
-    --color-bg-1: #00A3E8;
-    --color-bg-1-variant: rgba(0, 163, 232, 0.8);
-    --color-bg-3: #412e09; 
-    --color-bg-4: #937424;
-    --color-bg-5: #C6BE00; 
-    --color-bg-6: #724708;  
-    --color-white: #fff;
-    --color-black: #000;
-}
-h1,h2,h3,h4,h5,h6{
-    font-weight: 700;
-}
+@import '/main.css';
 /*----------------HEADER------------------*/
 header{
-    min-height: 50vh;
+    min-height: 70vh;
 }
 .header_text{
     position: relative;
     top: 3rem;
-}
-.header-title{
-    font-size: 2rem;
-}
-.header_text h2{
-    font-weight: 700;
+    font-weight: 700 !important;
 }
 /*----------------END HEADER------------------*/
 /*----------------CONTENT------------------*/
 .info{
     position: relative;
+    top: 5rem;
     min-height: 100vh;
 }
 #first-col{
@@ -46,6 +28,7 @@ header{
 }
 #first-col .login_link:hover{
    text-decoration: underline !important;
+   color: var(--color-bg-3);
 }
 #second-col{
     background: var(--color-bg-4);
@@ -53,6 +36,9 @@ header{
 #second-col .subtitle{
     font-size: 0.8rem;
     text-transform: uppercase;
+}
+#second-col .subtitle::after{
+    display: none;
 }
 .subtitle-info{
     margin-top: 2rem;
@@ -74,8 +60,13 @@ header{
 }
 /*----------------END CONTENT------------------*/
 /*----------------CARDS------------------*/
+#card-custom{
+    min-height: 100vh;
+    position: relative;
+    top: 5rem;
+}
 .cards-container{
-    background: var(--color-bg-1);
+    background: var(--color-bg-4);
 }
 .cards-container .title{
     color: var(--color-white);
@@ -91,6 +82,8 @@ header{
     color: var(--color-secondary);
     font-weight: 800;
     text-align: center;
+
+    text-transform: uppercase;
 }
 .card-img-top{
     transition: transform 0.5s ease-in-out;
@@ -98,8 +91,13 @@ header{
 .card-img-top:hover{
     transform: scale(1.1);
 }
-
 /*----------------END CARDS------------------*/
+/*----------------FOOTER------------------*/
+footer{
+    position: relative;
+    top: 5rem;
+}
+/*----------------END FOOTER------------------*/
 @media (min-width:900px){
     .header-title{
         font-size: 3rem;
@@ -107,7 +105,7 @@ header{
     .title{
         font-size: 2rem 
     }
-    .subtitle{
+    #second-col .subtitle{
         font-size: 1rem !important;
     }
     .col-text{

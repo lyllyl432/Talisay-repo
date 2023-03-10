@@ -1,30 +1,25 @@
-:root{
-    --color-primary: #FFDC81;
-    --color-secondary: #EFAC00;
-    --color-bg-1: #00A3E8;
-    --color-bg-1-variant: rgba(0, 163, 232, 0.8);
-    --color-bg-1-variant2: rgba(0, 163, 232, 0.5);
-    --color-bg-3: #412e09; 
-    --color-bg-4: #937424;
-    --color-bg-5: #C6BE00; 
-    --color-bg-6: #724708;  
-    --color-white: #fff;
-    --color-black: #000;
-    --color-black-variant: rgba(0,0,0,0.70);
-}
+@import '/main.css';
 header{
-    min-height: 100vh;
     position: relative;
     top: 5rem;
+    min-height: 70vh;
 }
 header .header-text-wrapper{
     position: absolute;
     left: 50%;
     top: 50%;
+    width: 80%;
+    height: 80%;
     transform: translate(-50%,-50%);
     background: var(--color-bg-1);
     opacity: 0.5;
-    height: 50%;
+}
+header .header-text{
+    position: relative;
+    display: grid;
+    place-content: center;
+    margin: 0;
+    padding: 0;
 }
 .header-text{
     position: relative;
@@ -53,13 +48,13 @@ header .header-text-wrapper{
 #about-content{
     position: relative;
     top: 5rem;
-    min-height: 100vh;
     background: linear-gradient(to right, #412e09, #724708);
+    padding: 3rem 0;
 }
 .subtitle{
     position: relative;
     color: var(--color-primary);
-    font-size: 2rem;
+    font-size: 1.2rem;
     text-align: center;
     text-shadow: 1px 1px 10px var(--color-black);
     margin-bottom: 3rem;
@@ -124,7 +119,7 @@ header .header-text-wrapper{
 #about-content-2{
     position: relative;
     top: 5rem;
-    min-height: 120vh;
+    min-height: 80vh;
     background: url(img/about-content-2-background.jpg);
     background-size: cover;
     background-position: center;
@@ -194,17 +189,21 @@ header .header-text-wrapper{
     font-size: 2rem;
     color: var(--color-bg-6);
 }
+#about-content-3 .about-content-text{
+    font-size: 0.8rem;
+}
 #about-content-3 .highlighter-font .font-wrapper{
     position: relative;
     margin: 1rem 0;
-    width: 2rem;
+    width: 1rem;
+    font-size: 1rem;
 }
 #about-content-3 .highlighter-font .font-wrapper .dashed-border{
     position: relative;
     border: 1px var(--color-bg-6) dashed;
     width: 100%;
     margin: 2rem auto;
-    height: 3rem;
+    height: 5rem;
     width: 0; 
 }
 #about-content-3 .about-content-text-wrapper{
@@ -246,9 +245,47 @@ header .header-text-wrapper{
     position: relative;
     z-index: 1;
 }
-
-
 footer{
     position: relative;
-    top: 5rem
+    top: 5rem;
 }
+
+@media (min-width: 300px){
+    .lead{
+        font-size: 1rem !important;
+    }
+} 
+@media (min-width: 576px) {
+    #about-content-3 .about-content-text {
+        font-size: 1rem;
+    }
+    #about-content-3 .highlighter-font .font-wrapper{
+        font-size: 2rem;
+        width: 2rem;
+    }
+}
+/* Perhaps bigger tablets */
+@media (min-width: 750px){
+    .subtitle {
+        font-size: 1.5rem;
+    }
+}
+
+/* Desktop screen or landscape tablet */
+@media (min-width: 900px) {
+    .subtitle {
+        font-size: 2rem;
+    }
+}
+
+/* A bit bigger if you need some adjustments around here */
+@media (min-width: 1100px) {
+    #about .box-title h3{
+        font-size: 1.5rem;
+    }
+}
+
+/* Widescreens */
+/* @media (min-width: 1500px) {
+    
+} */

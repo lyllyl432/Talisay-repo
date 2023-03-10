@@ -7,9 +7,8 @@
    <!-- Bootstrap CSS -->
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- MAIN CSS -->
-    <link rel="stylesheet" href="/Talisay College Project/main.css">
-    <link rel="stylesheet" href="/Talisay College Project/academic.css">
-    <link rel="stylesheet" href="/Talisay College Project/about.css">
+    <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" href="/about.css">
     <!-- FONT -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800;900&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
     <!-- FONT ICON  -->
@@ -30,21 +29,21 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto me-5">
+          <ul class="navbar-nav ms-auto d-flex me-5 gap-3">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#">Home</a>
+              <a class="nav-link" href="/index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
+              <a class="nav-link" href="/about.html">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Academic</a>
+              <a class="nav-link" href="/academic.html">Academic</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Academic</a>
+              <a class="nav-link" href="admission.html">Admission</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Academic</a>
+              <a class="nav-link" href="research.html">Research</a>
             </li>
           </ul>
         </div>
@@ -53,25 +52,27 @@
   <!------------END NAVBAR---------------->
   <!------------HEADER---------------->
     <header>
-      <div class="container-md h-100">
-        <div class="row h-100">
-          <div class="col-lg-8 mx-auto header-text-wrapper"></div>
-          <div class="header-text text-center">
-            <h1>About</h1>
-            <p class="lead">Get to know your Alma Mater.</p>
-          </div>
-          </div>
+      <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="header-text-wrapper"></div>
+              <div class="header-text text-center">
+                <h1>About</h1>
+                <p class="lead">Get to know your Alma Mater.</p>
+              </div>
+            </div>
         </div>
       </div>
-    </header>
+   </header>
     <!------------END HEADER---------------->
     <!-----------ABOUT-CONTENT---------------->
     <section id="about-content">
-      <div class="row">
-        <div class="col-lg-6 mx-auto">
-            <h3 class="subtitle mt-5">CORE VALUES</h3>
+      <div class="container h-100">
+      <div class="row justify-content-center">
+        <div class="col-lg-7 mx-auto">
+            <h3 class="subtitle mt-lg-5">CORE VALUES</h3>
             <!-- Swiper -->
-            <div id="carouselExampleControls" class="carousel slide text-center m-5" data-bs-ride="carousel">
+            <div id="carouselExampleControls" class="carousel slide text-center m-lg-5 m-0" data-bs-ride="carousel">
               <div class="carousel-inner">
                 <div class="carousel-item active">
                   <img src="img/carousel-img1.jpg" class="d-block w-100" alt="carousel image">
@@ -116,7 +117,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
   </section>
     <!-----------END ABOUT-CONTENT---------------->
       <!-----------ABOUT-CONTENT-2---------------->
@@ -127,7 +128,7 @@
             <h3 class="about-text mb-3">Religious Administrators</h3>
             <button class="btn btn-lg">2018-2022</button>
           </div>
-          <div class="col-md-6 about-text-wrapper">
+          <div class="col-md-6 about-text-wrapper d-none d-md-block d-md-flex justify-content-center flex-column">
               <h3 class="about-text mb-3">Only the best is good enough for TCC!</h3>
               <button class="btn btn-lg">COMPLETE LIST OF COURSES</button>
             </div>
@@ -142,9 +143,9 @@
         <div class="col-md-6">
           <h3 class="subtitle">GRADUATE ATTRIBUTES</h3>
           <img src="img/about-3-img.jpg" class="img-fluid">
-          <div class="row mt-5">
-            <div class="col-md-4 highlighter-font">
-              <ul class="d-flex flex-column">
+          <div class="row justify-content-center mt-5 g-3">
+            <div class="col-3 col-sm-3 highlighter-font me-lg-0">
+              <ul class="d-flex flex-column p-0 p-md-2">
                 <div class="font-wrapper">
                   <li><i class="fa-solid fa-heart"></i></li>
                   <div class="dashed-border"></div>
@@ -154,11 +155,14 @@
                 <div class="dashed-border"></div>
                 <li><i class="fa-solid fa-heart"></i></li>
                 <div class="dashed-border"></div>
-                <li><i class="fa-solid fa-heart"></i></li>
+                <li><i class="fa-solid fa-heart d-lg-none"></i></li>
+                <div class="dashed-border d-lg-none"></div>
+                <li><i class="fa-solid fa-heart d-lg-block"></i></li>
+                <div class="dashed-border d-lg-block d-sm-none"></div>
               </div>
               </ul>
             </div>
-            <div class="col-md-8">
+            <div class="col-8 col-sm-8">
               <div class="about-content-text-wrapper">
                 <h6 class="about-content-subtitle">Socially Responsible Communitarian</h6>
                 <p class="about-content-text">Shows genuine concern for others especially the marginalized, works and relates positively with others and shares willingly one’s time, talent, and resources for the betterment of society</p>
@@ -186,9 +190,9 @@
       <div class="col-md-6">
         <h3 class="subtitle">RELIGIOUS ATTRIBUTES</h3>
         <img src="img/about-3-img-2.jpg" class="img-fluid">
-        <div class="row mt-5">
-          <div class="col-md-4 highlighter-font">
-            <ul class="d-flex flex-column">
+        <div class="row justify-content-center mt-5">
+          <div class="col-3 highlighter-font me-lg-0">
+            <ul class="d-flex flex-column p-0 p-md-2">
               <div class="font-wrapper">
                 <li><i class="fa-solid fa-star"></i></li>
                 <div class="dashed-border"></div>
@@ -198,11 +202,15 @@
               <div class="dashed-border"></div>
               <li><i class="fa-solid fa-star"></i></li>
               <div class="dashed-border"></div>
-              <li><i class="fa-solid fa-star"></i></li>
+              <li><i class="fa-solid fa-star d-lg-none"></i></li>
+              <div class="dashed-border  d-lg-none"></div>
+              <li><i class="fa-solid fa-star d-lg-none"></i></li>
+              <div class="dashed-border d-sm-none d-lg-block"></div>
+              <li><i class="fa-solid fa-star d-sm-none d-lg-block"></i></li>
             </div>
             </ul>
           </div>
-          <div class="col-md-8">
+          <div class="col-8">
             <div class="about-content-text-wrapper">
               <h6 class="about-content-subtitle">Socially Responsible Communitarian</h6>
               <p class="about-content-text">Shows genuine concern for others especially the marginalized, works and relates positively with others and shares willingly one’s time, talent, and resources for the betterment of society</p>
@@ -266,10 +274,10 @@
       </div>
       <div class="col-md-4 d-flex align-items-center justify-content-center mt-3">
         <ul class="social d-flex gap-4">
-          <li><a href=""></a><i class="fa-brands fa-facebook"></i></li>
-          <li><a href=""></a><i class="fa-brands fa-twitter"></i></li>
-          <li><a href=""></a><i class="fa-brands fa-instagram"></i></li>
-          <li><a href=""></a><i class="fa-solid fa-envelope"></i></li>
+          <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+          <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+          <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+          <li><a href=""><i class="fa-solid fa-envelope"></i></a></li>
         </ul>
       </div>
     </div>

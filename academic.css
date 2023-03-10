@@ -1,77 +1,175 @@
-:root{
-    --color-primary: #FFDC81;
-    --color-secondary: #EFAC00;
-    --color-bg-1: #00A3E8;
-    --color-bg-1-variant: rgba(0, 163, 232, 0.6);
-    --color-bg-3: #412e09; 
-    --color-bg-4: #937424;
-    --color-bg-5: #C6BE00; 
-    --color-bg-6: #724708;  
-    --color-white: #fff;
-    --color-black: #000;
-}
+@import '/main.css';
 .navbar{
     position: relative;
     top: 0 !important;
     position: fixed;
 }
-/*---------------ABOUT------------------*/
-#about{
+/*---------------CONTENT------------------*/
+#academic-content{
     position: relative;
     top: 5rem;
-    min-height: calc(50vh + 5rem);
+    min-height: 100vh;
+    background: var(--color-bg-3);
+}
+#academic-content .subtitle {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+#academic-content .subtitle::after{
+    display: none;
+}
+.card{
+    overflow: hidden;
+}
+.card::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--color-black-variant);
+    z-index: 1;
+}
+.card-header{
+    position: relative;
+    top: 1rem;
+    font-size: 1.2rem;
+    z-index: 3;
+    border-bottom: none;
+}
+.card-header::after{
+    content: "";
+    position: absolute;
+    top: 3.5rem;
+    left: 0;
+    width: 1rem;
+    height: 2px;
+    background: var(--color-white);
+    transition: all 0.5s ease;
+}
+.layer-2{
+    background: transparent;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: all 0.5s ease-in-out;
+    z-index: 2;
+}
+.layer-2:hover{
+    background: var(--color-bg-1-variant);
+}
+.card:hover .card-header::after{
+    width: 100%;
+}
+.card-text{
+    position: absolute;
+    top: 5rem;
+    padding: 1rem;
+    transform: translateX(100%);
+    transition: all 0.5s ease;
+}
+.layer-2:hover .card-text{
+    transform: translateX(0);
+}
+/*---------------END CONTENT------------------*/
+
+/*---------------CONTENT SEARCH------------------*/
+#content-search{
+    position: relative;
+    top: 5rem;
+    min-height: 100vh;
+    background: url(img/content-search-background.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;    
     display: grid;
     place-items: center;
 }
-#about .card{
+#content-search .subtitle {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+#content-search .subtitle::after{
+    width: 0;
+}
+.bg-variant{
+    background: var(--color-bg-1-variant);
+}
+.search-bar{
     position: relative;
-    border: none;
-    margin: 1rem 0;
+    display: flex;
+    padding: 2rem;
+    gap: 0.5rem;
 }
-#about .content-border::before{
-    content: "";
-    position: absolute;
-    left: 0;
-    height: 100%;
-    width: 2px;
-    background: var(--color-secondary);
-}
-#about .content-border::after{
-    content: "";
-    position: absolute;
-    right: 0;
-    height: 100%;
-    width: 2px;
-    background: var(--color-secondary);
-}
-#about .card-subtitle{
-    font-size: 1.5rem;
-    color: var(--color-bg-4);
-    font-weight: 800;
-    text-transform: uppercase;
-}
-#about .card-text{
-    color:var(--color-black);
-    font-weight: 300;
-    margin-top: 1rem;
-}
-#about .card-link{
-    text-decoration: none;
-    color: var(--color-secondary);
-    font-weight: 800;
-    font-size: 1rem;
-}
-/*---------------END ABOUT------------------*/
-/*---------------MAP-CONTENT------------------*/
-#map-content{
-   position: relative;
-   top: 5rem;
-   height: 100vh;
-}
-#map-content iframe{
-    height: 100%;
+.search-bar input{
     width: 100%;
-    display: block;
+    border: 1px solid var(--color-black);
+    border-bottom: 2px solid var(--color-black);
+    outline: none;
 }
-/*---------------END MAP-CONTENT------------------*/
+.search-bar .btn{
+    padding: 0.25rem 1rem 1rem 1rem;
+}
+.search-bar .btn:hover{
+    box-shadow: 0px 5px 5px var(--color-black);
+}
+.search-bar span i{
+    margin-left: 3px;
+}
+/*---------------END CONTENT SEARCH------------------*/
+/*---------------CTA------------------*/
+#cta{
+    position: relative;
+    top: 5rem;
+    background: var(--color-bg-4);
+    padding: 3rem 0;
+}
+.cta-title h5{
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+.cta-links{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: start !important;
+    gap: 1rem;
+}
+.cta-icon{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding-left: 0;
+}
+.cta-icon .btn{
+    border-radius: 50%;
+    transition: all 0.5s ease;
+}
+.cta-icon .btn:hover{
+    background: var(--color-bg-1) !important;
+    border: none !important;
+}
+@media (min-width:300px){
+    .cta-icon{
+        font-size: 1rem;
+    }
+}
+@media (min-width:750px){
+    #academic-content .subtitle {
+        font-size: 3rem;
+    }
+}
+
+@media (min-width:900px){
+    .cta-icon{
+        font-size: 1rem;
+    }
+}
+
 
